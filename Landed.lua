@@ -10,6 +10,7 @@ local function CheckTaxiStatus()
     -- Detect landing: Transition from true -> false
     if wasOnTaxi and not isOnTaxi then
         FlashClientIcon()
+        PlaySoundFile("Interface\\AddOns\\Landed\\theEaglehaslanded.mp3", "Master")
         print("|cFF00FF00Landed!|r") -- Green colored text
     end
 
